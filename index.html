@@ -5,7 +5,19 @@
 	<title>IAT 381 Lab1 </title>
 	<link rel = 'stylesheet' href = "dist/css/bootstrap.css">
 </head>
-
+	<script src="js/jquery.js"></script>
+	<script src="dist/js/bootstrap.js"></script>
+	<script>
+		$('#myTab a').click(function (e) {
+			e.preventDefault()
+			$(this).tab('show')
+		})
+		
+		$(function () {
+			$('#myTab a:last').tab('show')
+		})
+	</script>
+	
 <body>
 	<div class ='container-fluid'>
 		<h1> Hello World!</h1>
@@ -24,5 +36,26 @@
 			</div>
 		</div>
 	</div>
+
+
+	<div role="tabpanel">
+
+  <!-- Nav tabs -->
+  <ul id="myTab" class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">I am Home</div>
+    <div role="tabpanel" class="tab-pane" id="profile">I am Profile</div>
+    <div role="tabpanel" class="tab-pane" id="messages">I am Messages</div>
+    <div role="tabpanel" class="tab-pane" id="settings">This is Settings</div>
+  </div>
+
+</div>
 </body>
 </html>
